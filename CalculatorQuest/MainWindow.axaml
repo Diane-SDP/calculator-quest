@@ -1,0 +1,45 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="400"
+        x:Class="CalculatorQuest.MainWindow"
+        Title="Calculator">
+    <Grid RowDefinitions="Auto, *" ColumnDefinitions="*">
+        <StackPanel>
+        <Label Name="op" Content=""></Label>
+        <Label Name="result" Content=""></Label>
+        </StackPanel>
+        <UniformGrid Grid.Row="1" Rows="5" Columns="4" Margin="5">
+            <!-- Première ligne -->
+            <Button Content="C" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="C"/>
+            <Button Content="CE" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="CE"/>
+            <Button Content="&#x2190;" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Del"/> <!-- Touche Retour -->
+            <Button Content="/" Tag="/" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+
+            <!-- Deuxième ligne -->
+            <Button Content="1" Tag="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+            <Button Content="2" Tag="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+            <Button Content="3" Tag="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+            <Button Content="x" Tag="*" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+
+            <!-- Troisième ligne -->
+            <Button Content="4" Tag="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+            <Button Content="5" Tag="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+            <Button Content="6" Tag="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+            <Button Content="-" Tag="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+
+            <!-- Quatrième ligne -->
+            <Button Content="7" Tag="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+            <Button Content="8" Tag="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+            <Button Content="9" Tag="9" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+            <Button Content="+" Tag="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+
+            <!-- Cinquième ligne -->
+            <Button Content="+/-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <Button Content="0" Tag="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+            <Button Content="." Tag="." HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="AddInput"/>
+            <Button Content="=" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Equal"/>
+        </UniformGrid>
+    </Grid>
+</Window>
